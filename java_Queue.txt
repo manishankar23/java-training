@@ -1,0 +1,53 @@
+//Queue
+class Queue{
+    int a[] = new int[5];
+    int front =-1;
+    int rear =-1;
+    
+ // push ()
+ 
+ public void push(int data){
+     if( rear==a.length-1){
+         System.out.println("Stack is full");
+     }
+     else{
+         if (front == -1) {front = 0;} 
+         rear++;
+         a[rear]=data;
+    }
+ }
+    
+ // pop()
+ 
+ public void dequeue(){
+     if(front==-1){
+         System.out.println("Stack is empty");
+     }
+     else{
+         front++;
+     }
+ }
+// display()*/
+ 
+ public void display(){
+     for(int i=front; i<=rear; i++){
+         System.out.println("Display the elements:" +a[i]);
+     }
+ }
+}
+
+// main function 
+
+public class Main{
+    public static void main(String[] args){
+     Queue q = new Queue();
+     q.push(10);
+     q.push(20);
+     q.push(30);
+     q.push(40);
+     q.push(50);
+     q.dequeue();
+     q.display();
+        
+    }
+}
